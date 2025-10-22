@@ -1,0 +1,70 @@
+:root{
+  --bg:#15151a;
+  --card:#20212a;
+  --muted:#9aa0a6;
+  --accent:#22d3a6;
+  --accent-2:#7dd3fc;
+  --danger:#ff6b6b;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:linear-gradient(180deg,#0f0f13,#17171b);
+  color:#e6eef1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  padding:20px;
+  overflow-x:hidden;
+}
+
+.app{max-width:900px;width:100%;}
+.app-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.app-header h1{margin:0;font-size:1.5rem;}
+.toggle{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:.9rem;}
+
+.card{
+  background:rgba(255,255,255,0.02);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 8px 30px rgba(8,10,20,.5);
+  border:1px solid rgba(255,255,255,0.05);
+  transition:all .4s ease-in-out;
+}
+
+.animate{animation:fadeIn .5s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+.progress-bar{
+  height:8px;
+  background:rgba(255,255,255,0.08);
+  border-radius:6px;
+  margin-bottom:14px;
+  overflow:hidden;
+}
+#progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  transition:width .4s ease;
+}
+
+.question{margin-bottom:12px;}
+.answers{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.option{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:10px 12px;cursor:pointer;}
+.option:hover{transform:translateY(-3px);}
+.option input{margin-top:3px;}
+.text-answer{width:100%;padding:10px 12px;border-radius:8px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.1);}
+.actions{display:flex;gap:10px;justify-content:flex-end;}
+.btn{padding:8px 14px;border:none;border-radius:10px;cursor:pointer;}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041014;}
+.btn.ghost{background:transparent;color:var(--muted);border:1px dashed rgba(255,255,255,0.05);}
+.btn.small{font-size:.9rem;padding:6px 10px;}
+.result{text-align:center;}
+.hidden{display:none;}
+.app-footer{text-align:center;margin-top:12px;color:var(--muted);font-size:.9rem;}
+

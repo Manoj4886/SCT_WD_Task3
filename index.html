@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Game Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Quiz Game</h1>
+      <div class="controls">
+        <label class="toggle">
+          <input id="timer-toggle" type="checkbox" checked />
+          <span>Timer</span>
+        </label>
+        <button id="restart-btn" class="btn small">Restart</button>
+      </div>
+    </header>
+
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+
+    <section class="card animate">
+      <div id="quiz-area">
+        <div class="meta-row">
+          <div id="progress">Question <span id="q-index">1</span>/<span id="q-total">1</span></div>
+          <div id="timer" class="timer">20</div>
+        </div>
+
+        <h2 id="question-text" class="question"></h2>
+        <form id="answers-form" class="answers"></form>
+
+        <div class="actions">
+          <button id="prev-btn" class="btn">Previous</button>
+          <button id="skip-btn" class="btn ghost">Skip</button>
+          <button id="next-btn" class="btn primary">Next</button>
+        </div>
+      </div>
+
+      <div id="result-area" class="result hidden">
+        <h2>Quiz Complete!</h2>
+        <p id="score-text"></p>
+        <div id="detailed-results"></div>
+        <div class="actions">
+          <button id="retry-btn" class="btn primary">Retry</button>
+          <button id="home-btn" class="btn">Home</button>
+          <button id="print-btn" class="btn ghost">Print / Export</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>Includes single, multi-select & fill-in questions. Progress auto-saves; reload to continue.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
